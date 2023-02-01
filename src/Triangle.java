@@ -1,33 +1,39 @@
 public class Triangle {
 
-    static int firstSide;
-    static int secondSide;
-    static int thirdSide;
+     private int firstSide;
+     private int secondSide;
+     private int thirdSide;
 
-    static int permimetr() {
+    public Triangle(int firstSide, int secondSide, int thirdSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.thirdSide = thirdSide;
+    }
+
+    public int calculatePerimeter() {
         return firstSide + secondSide + thirdSide;
     }
 
-    static int square() {
-        int perimetr2 = permimetr() / 2;
+    public int square() {
+        int perimetr2 = calculatePerimeter() / 2;
         return (int) Math.sqrt(perimetr2 * (perimetr2 - firstSide) * (perimetr2 - secondSide) * (perimetr2 - thirdSide));
     }
 
-    static Object forObjects() {
+    public Object forObjects() {
         Object obj = new Object();
         return obj;
     }
 
-    public static void setFirstSide(int firstSide) {
-        Triangle.firstSide = firstSide;
+    public  void setFirstSide(int firstSide) {
+        this.firstSide = firstSide;
     }
 
-    public static void setSecondSide(int secondSide) {
-        Triangle.secondSide = secondSide;
+    public  void setSecondSide(int secondSide) {
+        this.secondSide = secondSide;
     }
 
-    public static void setThirdSide(int thirdSide) {
-        Triangle.thirdSide = thirdSide;
+    public  void setThirdSide(int thirdSide) {
+        this.thirdSide = thirdSide;
     }
 
 }
